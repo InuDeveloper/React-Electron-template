@@ -1,3 +1,5 @@
+# Node modules used in the project
 node_modules/
 
-
+# Enviroment variables
+.env
