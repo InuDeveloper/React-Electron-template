@@ -2,9 +2,9 @@
   "name": "react-electron",
   "version": "1.0.0",
   "description": "trying to integrate react in my electron project",
-  "main": "/src/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo edi \"test\" script in the package.json file"
+    "test": "electron ."
   },
   "author": "Carlos David Jorge",
   "license": "MIT",

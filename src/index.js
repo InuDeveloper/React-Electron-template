@@ -1,4 +1,4 @@
-// Main JavaScript file
+// Electron + React project - This is a lab for another project
 
 const { app, BrowserWindow } = require('electron/main')
 const path = require('node:path')
@@ -12,7 +12,12 @@ function createWindow() {
         },
     })
 
-    win.loadFile('/index.html')
+    //  win.loadFile('/index.html')
+
+    //  Load the file using node:path
+    win.loadFile(path.join(__dirname, 'index.html'))
+
+    win.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
