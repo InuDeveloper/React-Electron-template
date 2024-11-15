@@ -5,7 +5,7 @@ import { resolve } from 'path'
 export default defineConfig({
   main: {
     plugins: [externalizeDepsPlugin()],
-    entry: resolve(__dirname, 'src/main/index.js/')
+    entry: resolve(__dirname, 'src/main/index.js')
   },
   preload: {
     plugins: [externalizeDepsPlugin()],
