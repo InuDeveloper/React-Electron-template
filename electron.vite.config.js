@@ -9,7 +9,7 @@ export default defineConfig({
   },
   preload: {
     plugins: [externalizeDepsPlugin()],
-    input: resolve(__dirname, 'src/script/preload.js')
+    input: resolve(__dirname, 'src/preload/index.js')
   },
   renderer: {
     resolve: {
@@ -17,7 +17,7 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
-    input: resolve(__dirname, 'src/script/index.html'),
+    input: resolve(__dirname, 'src/renderer/index.html'),
     plugins: [react()]
   }
 })
