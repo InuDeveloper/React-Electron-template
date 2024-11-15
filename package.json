@@ -2,17 +2,33 @@
   "name": "react-electron",
   "version": "1.0.0",
   "description": "trying to integrate react in my electron project",
-  "main": "src/index.js",
+  "main": "./out/main/index.js",
   "scripts": {
-    "test": "electron ."
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "postinstall": "electron-vite install-app-deps"
   },
   "author": "Carlos David Jorge",
   "license": "MIT",
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
   "devDependencies": {
-    "electron": "^33.2.0"
+    "@electron-toolkit/eslint-config": "^1.0.2",
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^3.0.0",
+    "electron-updater": "^6.3.9"
   }
 }
