@@ -9,7 +9,7 @@ import { Button, Flex, Text } from "@radix-ui/themes"
 // Radix UI, Panda UI and Kuma UI. We need to reach peak performance with this libraries
 
 function App() {
-  const ipcHandle = () => window.electron.ipcRenderer.send('ping')
+  const ipcHandle = () => window.electron.ipcRenderer.send('HEY, Answer')
 
   return (
     <>
