@@ -11,7 +11,9 @@ function createWindow() {
     ...process.platform === "linux" ? { icon } : {},
     webPreferences: {
       preload: node_path.join(__dirname, "../preload/index.js"),
-      sandbox: false
+      sandbox: false,
+      contextIsolation: true,
+      nodeIntegration: false
     }
   });
   win.on("ready-to-show", () => {
@@ -32,7 +34,7 @@ electron.app.whenReady().then(() => {
   electron.app.on("browser-window-created", (_, window) => {
     utils.optimizer.watchWindowShortcuts(window);
   });
-  electron.ipcMain.on("ping", () => console.log("pong"));
+  electron.ipcMain.on("HEY, Answer", () => console.log("Hewooo!"));
   createWindow();
   electron.app.on("activate", function() {
     if (electron.BrowserWindow.getAllWindows().length === 0) createWindow();
