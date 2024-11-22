@@ -1,7 +1,5 @@
-import "@radix-ui/themes/styles.css"
 import './assets/global.css'
 
-import { Theme } from "@radix-ui/themes"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './app.jsx'
@@ -13,8 +11,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     the documentation are in the followed link: https://www.radix-ui.com/themes/docs/overview/getting-started#basic-configuration */}
 
     {/* Also I'm going to customise the theme in in the test to check if this work */}
-    <Theme accentColor="gray" grayColor="olive" radius="large" scaling="95%">
+    {/* <Theme accentColor="gray" grayColor="olive" radius="large" scaling="95%">
       <App />
-    </Theme>
+    </Theme> */}
+    <App/>
   </React.StrictMode>
 )
